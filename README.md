@@ -1,6 +1,6 @@
 # Flutter NFC Reader
 
-![](http://pluspng.com/img-png/nfc-png-g-technology-2269.png)
+![](http://pluspng.com/img-png/nfc-png-g-technology-2269.png =250x)
 
 A new flutter plugin to help developers looking to use internal hardware inside Android devices (For now, iOS coming soon) for reading NFC tags.
 
@@ -19,13 +19,13 @@ dependencies:
       ref: master
 ```
 
-and then run the shell
+and then run the shell command
 
 ```shell
 flutter packages get
 ```
 
-last step import to the project:
+import the plugin to your project:
 
 ```dart
 import 'package:nfc_io/nfc_io.dart';
@@ -35,7 +35,7 @@ import 'package:nfc_io/nfc_io.dart';
 
 ### Android setup
 
-Add those two lines to your `AndroidManifest.xml` on the top
+Add these two lines to your `AndroidManifest.xml` on the top
 
 ```xml
 <uses-permission android:name="android.permission.NFC" />
@@ -48,20 +48,24 @@ Coming soon...
 
 ### Read NFC
 
-This function will return a promise when a read occurs, till that very moment the reading session is open.
-The promise will return a `NfcData` model, this model contains:
+This function will return a stream, the read session will be kept open until otherwise closed.
+The stream will return a `NfcData` model whenever an NFC tag/card is detected. This model contains:
 
-- id > id of the tag
-- content > content of the tag (Blank if not an NDEF)
-- error > if any error occurs, null otherwise
-- status > either none, reading, read, stopped or error
+```json
+{
+    "id": "Id of the tag",
+    "content": "Content of the tag (Blank if not an NDEF)",
+    "error": "If any error occurs, null otherwise",
+    "status": "Either none, reading, read, stopped or error"
+}
+```
 
 ```dart
 Future<void> startNFC() async {
     StreamSubscription _subscription = NfcIo.startReading.listen((NfcData data) {
         print(data);
     });
-  }
+}
 ```
 
 ### Stop NFC
@@ -73,7 +77,7 @@ Future<void> stopNFC() async {
         NfcData result = await NfcIo.stopReading;
         print(result);
     }
-  }
+}
 ```
 
 For better details look at the demo app.
