@@ -13,7 +13,7 @@ Add to pubspec.yaml:
 
 ```yaml
 dependencies:
-  flutter_nfc_reader:
+  nfc_io:
     git:
       url: git@github.com:agent306/nfc_io.git
       ref: master
