@@ -1,6 +1,6 @@
 name: nfc_io
 description: A new flutter plugin to help developers looking to use internal hardware inside Android devices (For now, iOS coming soon) for reading NFC tags.
-version: 1.0.0
+version: 1.0.1
 author: Mohamed Nashath <agent306>
 homepage: https://github.com/agent306/nfc_io
 
