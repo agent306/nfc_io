@@ -1,3 +1,7 @@
+## 1.0.2
+
+* Updated kotlin version on plugin library
+
 ## 1.0.1
 
 * Updated kotlin version
