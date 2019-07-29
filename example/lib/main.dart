@@ -32,7 +32,13 @@ class _MyAppState extends State<MyApp> {
                 height: 40,
               ),
               RawMaterialButton(
-                child: Icon(isReading ? Icons.stop : Icons.play_arrow),
+                child: Row(
+                  children: <Widget>[
+                    Icon(isReading ? Icons.stop : Icons.play_arrow),
+                    SizedBox(width: 16,),
+                    Text(isReading ? "Stop Scanning" : "Start Scanning"),
+                  ],
+                ),
                 onPressed: () async {
                   if (!isReading) {
                     _subscription = NfcIo.startReading.listen((data) {
