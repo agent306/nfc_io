@@ -4,7 +4,7 @@
 
 A new flutter plugin to help developers looking to use internal hardware inside Android devices (For now, iOS coming soon) for reading NFC tags.
 
-The system activate a pooling reading session that keeps scanning tags until it is manually turned off.
+It starts a reading session that keeps scanning tags until it is manually turned off.
 You can trigger the stop event manually using a dedicated function.
 
 ## Installation
@@ -51,14 +51,12 @@ Coming soon...
 This function will return a stream, the read session will be kept open until otherwise closed.
 The stream will return a `NfcData` model whenever an NFC tag/card is detected. This model contains:
 
-```json
-{
-    "id": "Id of the tag",
-    "content": "Content of the tag (Blank if not an NDEF)",
-    "error": "If any error occurs, null otherwise",
-    "status": "Either none, reading, read, stopped or error"
-}
-```
+|  Field  |                  Description                 |
+|:-------:|:--------------------------------------------:|
+| id      | Id of the tag                                |
+| content | Content of the tag (Blank if not an NDEF)    |
+| error   | If any error occurs, null otherwise          |
+| status  | Either none, reading, read, stopped or error |
 
 ```dart
 Future<void> startNFC() async {
