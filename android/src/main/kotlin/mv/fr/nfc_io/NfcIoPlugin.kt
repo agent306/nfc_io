@@ -125,7 +125,7 @@ class NfcIoPlugin(val registrar: Registrar): MethodCallHandler, EventChannel.Str
     // ndef will be null if the discovered tag is not a NDEF tag
     // read NDEF message
     if (ndef == null) {
-      eventSink?.success(mapOf(kId to bytesToHex(tag!!.id), kContent to mapOf("type" to tag.techList.toList()), kError to "", kStatus to "read"))
+      eventSink?.success(mapOf(kId to bytesToHex(tag!!.id), kContent to tag.toString(), kError to "", kStatus to "read"))
     } else {
       ndef?.connect()
       val message = ndef?.ndefMessage
