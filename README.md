@@ -1,6 +1,6 @@
 # Flutter NFC Reader
 
-<img src="http://pluspng.com/img-png/nfc-png-g-technology-2269.png" alt="NFC" width="250"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/NFC_logo.svg/2000px-NFC_logo.svg.png" alt="NFC" width="250"/>
 
 A new flutter plugin to help developers looking to use internal hardware inside Android devices (For now, iOS coming soon) for reading NFC tags.
 
