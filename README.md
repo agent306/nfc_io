@@ -7,6 +7,13 @@ A new flutter plugin to help developers looking to use internal hardware inside 
 It starts a reading session that keeps scanning tags until it is manually turned off.
 You can trigger the stop event manually using a dedicated function.
 
+## Supported NFC Format
+
+|      Platform     |          Supported Tags/Cards         |
+|:-----------------:|:-------------------------------------:|
+| Android           | **NDEF:**,A, B, F, V, BARCODE, MIFARE |
+| iOS (Coming Soon) | **NDEF:** NFC TYPE 1, 2, 3, 4, 5      |
+
 ## Installation
 
 Add to pubspec.yaml:

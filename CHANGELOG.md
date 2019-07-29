@@ -1,3 +1,7 @@
+## 1.0.2+1
+
+* Updated the read me to include supported tag/cards
+
 ## 1.0.2
 
 * Updated kotlin version on plugin library
